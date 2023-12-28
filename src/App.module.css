@@ -1,0 +1,31 @@
+.check {
+    width: 20px;
+    height: 20px;
+    border: solid black 1px;
+    border-radius: 3px;
+}
+
+.check::after {
+    content: 'a';
+    display: none;
+    background-color: aqua;
+}
+
+input[type='checkbox']:checked+.check::after {
+    display: block;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+label {
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    display: inline-block;
+}
+
+/* input[type='checkbox']:checked+label {
+    background-color: blue;
+} */
