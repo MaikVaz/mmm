@@ -712,7 +712,8 @@ function Spisok({ mySpisok }: { mySpisok: IShowData[] }) {
 
   return (
     <>
-      <Modal isShow={isShow} doClose={() => { setIsShow(false) }}> </Modal >
+      {isShow && <Modal isShow={isShow} doClose={() => { setIsShow(false) }}> </Modal >}
+
       <ul>
         {mySpisok.map((el, ind) => (
           <li key={ind}>{el.name}</li>
